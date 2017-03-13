@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-simple-form',
   template: `<div>
     <input #myInput type="text">
-    <button (click)="onClick($event, myInput.value)">Click this every day!</button>
+    <button (mouseover)="onClick($event, myInput.value)">Click this every day!</button>
     </div>`,
   styles: []
 })
