@@ -10,11 +10,6 @@ export class AppComponent {
   title = 'I am ready to LEARN ANGULAR!';
 
   constructor(
-    @Inject('mail') private mail,
-    @Inject('api') private api,
-    @Inject('secret') private secret
-    
-    
-    
+      @Inject('mail') private mail
     ){}
 }

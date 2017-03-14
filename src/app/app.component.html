@@ -1,17 +1,24 @@
 <div>
-  <app-simple-form>
+  <!--<app-simple-form>
   </app-simple-form>
 
   {{mail.message}}
 
   <hr>
   {{api}}
-  
+
   <hr>
   <p>
-    Shhhh....
+    Shhhh....I'm going to tell you a secret:
     <hr>
   {{secret}}
-  <p>
+  <p>-->
+
+    <ul>
+      <li *ngFor="let message of mail.messages" >
+        {{message}}
+      </li>
+    </ul>
+
 
 </div>
