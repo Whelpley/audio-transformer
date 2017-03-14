@@ -3,15 +3,19 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-simple-form',
   template: `<div>
-    {{shouting}}
-    <input #myInput type="text">
-    <button (mouseover)="onClick($event, myInput.value)">Click this every day!</button>
+    {{message}}
+    <input 
+      #myInput 
+      type="text" 
+      [(ngModel)]="message"
+      >
+    <button (click)="onClick($event, myInput.value)">Click this every day!</button>
     </div>`,
   styles: []
 })
 export class SimpleFormComponent implements OnInit {
 
-  @Input() shouting;
+  @Input() message;
 
   onClick(event, value){
     console.log(event);
