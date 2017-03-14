@@ -10,7 +10,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       >
     <button (click)="update.emit({text:message})">Click this every day!</button>
    `,
-  styles: [':host{display: flex;}']
+  styles: [':host{display: flex; flex-direction: column;} *{font-family: monospace}']
 })
 export class SimpleFormComponent implements OnInit {
 
