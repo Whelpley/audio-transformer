@@ -2,6 +2,8 @@
 
 *Project playground, nothing to see here*
 
+(Eventually this will be an app to record, save, and manipulate audio. First target will be web-only, then moving on to mobile compatibility via NativeScript.)
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
 ## Development server
