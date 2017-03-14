@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-simple-form',
   template: `<div>
-    {{message}}
+    {{shouting}}
     <input #myInput type="text">
     <button (mouseover)="onClick($event, myInput.value)">Click this every day!</button>
     </div>`,
@@ -11,7 +11,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SimpleFormComponent implements OnInit {
 
-  @Input() message
+  @Input() shouting;
 
   onClick(event, value){
     console.log(event);
