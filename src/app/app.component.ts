@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MailService } from './mail.service';
+import { Component, Inject } from '@angular/core';
+// import { MailService } from './mail.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,10 @@ import { MailService } from './mail.service';
 export class AppComponent {
   title = 'I am ready to LEARN ANGULAR!';
 
-  constructor(private mail:MailService){}
+  constructor(
+    @Inject('mail') private mail,
+    @Inject('api') private api
+    
+    
+    ){}
 }
