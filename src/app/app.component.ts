@@ -11,7 +11,9 @@ export class AppComponent {
 
   constructor(
     @Inject('mail') private mail,
-    @Inject('api') private api
+    @Inject('api') private api,
+    @Inject('secret') private secret
+    
     
     
     ){}

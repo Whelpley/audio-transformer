@@ -20,7 +20,9 @@ import { MailService } from './mail.service';
   ],
   providers: [
     {provide:'mail', useClass:MailService},
-    {provide:'api', useValue:'http://localhost:3000/'}
+    {provide:'api', useValue:'http://localhost:3000/'},
+    {provide:'secret', useValue:'This is a secret'}
+    
     
     
     ],
