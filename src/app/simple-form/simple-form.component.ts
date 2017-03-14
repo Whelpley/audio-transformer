@@ -23,10 +23,6 @@ export class SimpleFormComponent implements OnInit {
   //   console.log(value);
   // }
 
-  onUpdate(id, event){
-    this.mail.update(id, text);
-  }
-
   // constructor() { 
   //   setInterval(()=> this.message = Math.random().toString(), 1000);
   // }
