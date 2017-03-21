@@ -97,7 +97,6 @@ export class AppComponent  implements OnInit {
   }
 
        draw(analyser, canvas, canvasCtx, dataArray) {
-         // wtf is requestAnimationFrame()?
           var WIDTH = canvas.width;
           var HEIGHT = canvas.height;
           var drawVisual = requestAnimationFrame(this.draw);
