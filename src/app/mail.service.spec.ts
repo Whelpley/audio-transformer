@@ -1,5 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
+// Deprecated
+
 import { TestBed, async, inject } from '@angular/core/testing';
 import { MailService } from './mail.service';
 
