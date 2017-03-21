@@ -71,8 +71,8 @@ export class AppComponent  implements OnInit {
       var intendedWidth = document.querySelector('.wrapper').clientWidth;
 
       canvas.setAttribute('width', intendedWidth);
-      const WIDTH = canvas.width;
-      const HEIGHT = canvas.height;
+      var WIDTH = canvas.width;
+      var HEIGHT = canvas.height;
 
 
       var visualSetting = "sinewave";
@@ -91,9 +91,16 @@ export class AppComponent  implements OnInit {
 
         canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
-        function draw() {
+        this.draw(analyser, canvas, canvasCtx, dataArray);
 
-          drawVisual = requestAnimationFrame(draw);
+      };
+  }
+
+       draw(analyser, canvas, canvasCtx, dataArray) {
+         // wtf is requestAnimationFrame()?
+          var WIDTH = canvas.width;
+          var HEIGHT = canvas.height;
+          var drawVisual = requestAnimationFrame(this.draw);
 
           analyser.getByteTimeDomainData(dataArray);
 
@@ -124,13 +131,7 @@ export class AppComponent  implements OnInit {
 
           canvasCtx.lineTo(canvas.width, canvas.height/2);
           canvasCtx.stroke();
-        };
-
-        draw();
-
-      };
-
-}
+    };
 
     onClick() {
         this.playSample();
