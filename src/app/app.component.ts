@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 // import { MailService } from './mail.service';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -35,7 +35,7 @@ export class AppComponent  implements OnInit {
   }
 
     fetchSample(): Promise<AudioBuffer> {
-        return fetch('samples/snare.wav')
+        return fetch('./assets/samples/toilet_flushing.wav')
             .then(response => response.arrayBuffer())
             .then(buffer => {
                 return new Promise((resolve, reject) => {
@@ -53,6 +53,10 @@ export class AppComponent  implements OnInit {
         bufferSource.buffer = this.audioBuffer;
         bufferSource.connect(this.audioContext.destination);
         bufferSource.start(0);
+    }
+
+    onClick() {
+        this.playSample();
     }
 
 }
