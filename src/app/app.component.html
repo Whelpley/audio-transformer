@@ -1,21 +1,8 @@
-<div>
-  <!--<app-simple-form>
-  </app-simple-form>
+<!--<div>
 
-  {{mail.message}}
-
-  <hr>
-  {{api}}
-
-  <hr>
-  <p>
-    Shhhh....I'm going to tell you a secret:
-    <hr>
-  {{secret}}
-  <p>-->
     <h2>This title is in the app root</h2>
 
-    <p>----------------------</p>
+    <p></p>
     <h3>Old Components Here</h3>
     <ul>
       <li *ngFor="let message of mail.messages">
@@ -28,8 +15,10 @@
         [message]="message.text" 
         (update)="onUpdate(message.id, $event.text)"
       >
-        <!--{{message}}-->
+        {{message}}
     </app-simple-form>
 
 
-</div>
+</div>-->
+
+<button [disabled]='loadingSample'>play</button>
