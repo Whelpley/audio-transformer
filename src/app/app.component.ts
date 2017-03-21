@@ -24,9 +24,16 @@ export class AppComponent  implements OnInit {
     private audioBuffer: AudioBuffer;
 
     ngOnInit() {
-        this.audioContext = new AudioContext();
-    }
-    
+      this.audioContext = new AudioContext();
+      this.loadingSample = true;
+      this.fetchSample()
+          .then(audioBuffer => {
+              this.loadingSample = false;
+              this.audioBuffer = audioBuffer;
+          })
+          .catch(error => throw error);
+  }
+
     fetchSample(): Promise<AudioBuffer> {
         return fetch('samples/snare.wav')
             .then(response => response.arrayBuffer())
@@ -40,4 +47,12 @@ export class AppComponent  implements OnInit {
                 })
             });
     }
+
+    playSample() {
+        let bufferSource = this.audioContext.createBufferSource();
+        bufferSource.buffer = this.audioBuffer;
+        bufferSource.connect(this.audioContext.destination);
+        bufferSource.start(0);
+    }
+
 }
