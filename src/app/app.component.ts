@@ -6,6 +6,7 @@ import { Component, Inject, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 // export class AppComponent {
 //   title = 'I am ready to LEARN ANGULAR!';
 
@@ -22,6 +23,7 @@ export class AppComponent  implements OnInit {
     private audioContext: AudioContext;
     private loadingSample: boolean = false;
     private audioBuffer: AudioBuffer;
+    private playbackRate: number = 1.0;
 
     ngOnInit() {
       this.audioContext = new AudioContext();
@@ -51,6 +53,7 @@ export class AppComponent  implements OnInit {
     playSample() {
         let bufferSource = this.audioContext.createBufferSource();
         bufferSource.buffer = this.audioBuffer;
+        bufferSource.playbackRate.value = this.playbackRate;
         bufferSource.connect(this.audioContext.destination);
         bufferSource.start(0);
     }

@@ -24,3 +24,11 @@
 
 <button (click)='onClick()'
          [disabled]='loadingSample'>play</button>
+
+<div>
+  <input type='range'
+         min='0.01'
+         max='5.0'
+         step='0.01'
+         [(ngModel)]='playbackRate'>
+</div>
