@@ -1,29 +1,5 @@
-<!--<div>
-
-    <h2>This title is in the app root</h2>
-
-    <p></p>
-    <h3>Old Components Here</h3>
-    <ul>
-      <li *ngFor="let message of mail.messages">
-        {{message.text}}
-      </li>
-    </ul>
-
-    <app-simple-form 
-        *ngFor="let message of mail.messages" 
-        [message]="message.text" 
-        (update)="onUpdate(message.id, $event.text)"
-      >
-        {{message}}
-    </app-simple-form>
-
-
-</div>-->
-
 <div class="wrapper">
 
-  <canvas class="visualizer" width="640" height="100"></canvas> 
 
   <button (click)='onClick()'
           [disabled]='loadingSample'>Flush</button>
@@ -47,5 +23,22 @@
           step='0.01'
           [(ngModel)]='gain'>
   </div>
+
+  <p>--------------</p>
+
+    <h3>Old Components Here</h3>
+    <ul>
+      <li *ngFor="let message of mail.messages">
+        {{message.text}}
+      </li>
+    </ul>
+
+    <app-simple-form 
+        *ngFor="let message of mail.messages" 
+        [message]="message.text" 
+        (update)="onUpdate(message.id, $event.text)"
+      >
+        {{message}}
+    </app-simple-form>
 
 </div>

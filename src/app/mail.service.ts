@@ -1,4 +1,3 @@
-// Deprecate
 
 import { Injectable } from '@angular/core';
 
