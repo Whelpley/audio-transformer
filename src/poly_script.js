@@ -1,3 +1,5 @@
+// DEPRECATE THIS
+
 console.log("Adding the code to Request Animation Frames")
 
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
